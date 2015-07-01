@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Modern Business - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://localhost:3000/dcs">Home</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="about.html">About Us</a>
+                    </li>
+                    <li>
+                        <a href="services.html">Open Source</a>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">DC Members<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="portfolio-1-col.html">Current Members</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-2-col.html">Past Members</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="blog-home-1.html">Current Projects</a>
+                            </li>
+                            <li>
+                                <a href="blog-home-2.html">Past Projects</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="contact.html">Sign In</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+</body>
+</html>
+<br><br>
+
+<h1>Listing dc_members</h1>
+
+<table border="1" style="width:100%">
+ 
+  <tr>
+    <th>Member</th>
+    <th>First name</th>
+    <th>Mid name</th>
+    <th>Last name</th>
+    <th>Date of birth</th>
+    <th>Gender</th>
+    <th>Blood group</th>
+    <th>Local address</th>
+    <th>Permanent address</th>
+    <th>Father name</th>
+    <th>Mother name</th>
+    <th>Guardian name</th>
+    <th>Course name</th>
+    <th>Github link</th>
+    <th>Linkedin link</th>
+    <th>Sem of joining</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dc_members.each do |dc_member| %>
+  <tr>
+    
+    <td><%= dc_member.first_name %></td>
+    <td><%= dc_member.mid_name %></td>
+    <td><%= dc_member.last_name %></td>
+    <td><%= dc_member.date_of_birth %></td>
+    <td><%= dc_member.gender %></td>
+    <td><%= dc_member.blood_group %></td>
+    <td><%= dc_member.local_address %></td>
+    <td><%= dc_member.permanent_address %></td>
+    <td><%= dc_member.father_name %></td>
+    <td><%= dc_member.mother_name %></td>
+    <td><%= dc_member.guardian_name %></td>
+    <td><%= dc_member.course_name %></td>
+    <td><%= dc_member.github_link %></td>
+    <td><%= dc_member.linkedin_link %></td>
+    <td><%= dc_member.sem_of_joining %></td>
+    <td><%= dc_member.email %></td>
+    <td><%= link_to 'Show', dc_member %></td>
+    <td><%= link_to 'Edit', edit_dc_member_path(dc_member) %></td>
+    <td><%= link_to 'Destroy', dc_member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dc member', new_dc_member_path %>
+
+
