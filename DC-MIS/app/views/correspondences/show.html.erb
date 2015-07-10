@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Type of corr:</b>
+  <%= @correspondence.type_of_corr %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%= @correspondence.subject %>
+</p>
+
+<p>
+  <b>User initials:</b>
+  <%= @correspondence.user_initials %>
+</p>
+
+<p>
+  <b>Medium:</b>
+  <%= @correspondence.medium %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @correspondence.address %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @correspondence.description %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @correspondence.date %>
+</p>
+
+
+<%= link_to 'Edit', edit_correspondence_path(@correspondence) %> |
+<%= link_to 'Back', correspondences_path %>

@@ -1,0 +1,2 @@
+class PastDcmembersController < ApplicationController
+end

@@ -1,0 +1,2 @@
+class CurrentDcmembersController < ApplicationController
+end

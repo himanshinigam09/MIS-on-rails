@@ -1,0 +1,105 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @profile.first_name %>
+</p>
+
+<p>
+  <b>Mid name:</b>
+  <%= @profile.mid_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @profile.last_name %>
+</p>
+
+<p>
+  <b>Date of birth:</b>
+  <%= @profile.date_of_birth %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%= @profile.gender %>
+</p>
+
+<p>
+  <b>Blood group:</b>
+  <%= @profile.blood_group %>
+</p>
+
+<p>
+  <b>Local address:</b>
+  <%= @profile.local_address %>
+</p>
+
+<p>
+  <b>Permanent address:</b>
+  <%= @profile.permanent_address %>
+</p>
+
+<p>
+  <b>Father name:</b>
+  <%= @profile.father_name %>
+</p>
+
+<p>
+  <b>Mother name:</b>
+  <%= @profile.mother_name %>
+</p>
+
+<p>
+  <b>Guardian name:</b>
+  <%= @profile.guardian_name %>
+</p>
+
+<p>
+  <b>Course name:</b>
+  <%= @profile.course_name %>
+</p>
+
+<p>
+  <b>Sem of joining:</b>
+  <%= @profile.sem_of_joining %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @profile.email %>
+</p>
+
+<p>
+  <b>Github:</b>
+  <%= @profile.github_id %>
+</p>
+
+<p>
+  <b>Linkedin:</b>
+  <%= @profile.linkedin_id %>
+</p>
+
+<p>
+  <b>Facebook:</b>
+  <%= @profile.facebook_id %>
+</p>
+
+<p>
+  <b>Googleplus:</b>
+  <%= @profile.googleplus_id %>
+</p>
+
+<p>
+  <b>Twitter:</b>
+  <%= @profile.twitter_id %>
+</p>
+
+<p>
+  <b>Blog:</b>
+  <%= @profile.blog_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>
